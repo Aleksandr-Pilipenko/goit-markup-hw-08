@@ -1,5 +1,9 @@
 .form {
-  width: 448px;
+  @include desktop {
+    width: 448px;
+  }
+
+  width: 370px;
   margin: 0;
 }
 .text-form {
