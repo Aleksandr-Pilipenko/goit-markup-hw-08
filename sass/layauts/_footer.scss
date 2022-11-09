@@ -4,6 +4,13 @@
   padding-bottom: 60px;
 }
 .footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 60px;
+
   @include tablets {
     display: flex;
     flex-wrap: wrap;
@@ -15,14 +22,9 @@
   @include desktop {
     display: flex;
     align-items: baseline;
+    justify-content: flex-start;
     gap: 70px;
   }
-
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  gap: 60px;
 }
 
 .footer-info {
@@ -133,8 +135,19 @@
 .networks__ikon {
   fill: var(--super-waite);
 }
-
+.footer-feedback {
+  width: 100%;
+  @include tablets {
+    width: 450px;
+  }
+  @include desktop {
+    width: 358px;
+  }
+}
 .footer-text-form {
+  @include desktop {
+    text-align: left;
+  }
   margin-bottom: 20px;
 
   font-style: normal;
@@ -151,6 +164,8 @@
 .footer-form {
   @include desktop {
     display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
     gap: 12px;
     width: 570px;
     margin: 0;
@@ -158,19 +173,16 @@
 
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   flex-direction: column;
   gap: 20px;
   align-items: center;
 }
+.footer-laibel {
+  width: 100%;
+}
 
 .footer-input {
-  @include desktop {
-    width: 358px;
-  }
-  @include tablets {
-    width: 450px;
-  }
-
   width: 100%;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);

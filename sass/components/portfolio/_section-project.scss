@@ -4,8 +4,15 @@
   gap: 30px;
 }
 .project-item {
+  @include tablets {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 90px) / 3);
+  }
   background-color: var(--super-waite);
-  width: 370px;
+
+  width: 450px;
 }
 .project-link {
   display: block;

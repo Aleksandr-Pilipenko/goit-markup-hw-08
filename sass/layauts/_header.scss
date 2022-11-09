@@ -15,11 +15,20 @@
 
 .header__logo,
 .header__logo__color {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
+  @include tablets {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+  }
+  @include desktop {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+  }
 }
 
 .header__navigation__list .header__navigation__site.current {
@@ -27,9 +36,16 @@
 }
 
 .header__navigation__list {
-  display: flex;
-  margin-left: 93px;
-  gap: 50px;
+  @include tablets {
+    display: flex;
+    margin-left: 87px;
+    gap: 50px;
+  }
+  @include desktop {
+    display: flex;
+    margin-left: 93px;
+    gap: 50px;
+  }
 }
 
 .header__navigation__site {
@@ -71,12 +87,31 @@
 }
 
 .conect {
-  display: flex;
-  gap: 50px;
-  margin-left: auto;
+  @include tablets {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    margin-left: auto;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  @include desktop {
+    display: flex;
+    gap: 50px;
+    margin-left: auto;
+    flex-direction: row;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .conect__cont {
+  @include tablets {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  @include desktop {
+  }
   color: var(--text-color);
   font-weight: 500;
   font-size: 14px;

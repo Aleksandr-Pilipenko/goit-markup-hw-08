@@ -141,23 +141,44 @@ body {
   color: var(--accent-color);
 }
 
-.header__logo,
+@media screen and (min-width: 768px) {
+  .header__logo,
 .header__logo__color {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__logo,
+.header__logo__color {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+  }
 }
 
 .header__navigation__list .header__navigation__site.current {
   color: var(--accent-color);
 }
 
-.header__navigation__list {
-  display: flex;
-  margin-left: 93px;
-  gap: 50px;
+@media screen and (min-width: 768px) {
+  .header__navigation__list {
+    display: flex;
+    margin-left: 87px;
+    gap: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__navigation__list {
+    display: flex;
+    margin-left: 93px;
+    gap: 50px;
+  }
 }
 
 .header__navigation__site {
@@ -192,10 +213,25 @@ body {
   border-radius: 2px;
 }
 
-.conect {
-  display: flex;
-  gap: 50px;
-  margin-left: auto;
+@media screen and (min-width: 768px) {
+  .conect {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    margin-left: auto;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .conect {
+    display: flex;
+    gap: 50px;
+    margin-left: auto;
+    flex-direction: row;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .conect__cont {
@@ -212,6 +248,12 @@ body {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .conect__cont {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 }
 .conect__cont:hover, .conect__cont:focus {
   color: var(--accent-color);
@@ -248,6 +290,7 @@ body {
   .footer-content {
     display: flex;
     align-items: baseline;
+    justify-content: flex-start;
     gap: 70px;
   }
 }
@@ -363,6 +406,20 @@ body {
   fill: var(--super-waite);
 }
 
+.footer-feedback {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .footer-feedback {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-feedback {
+    width: 358px;
+  }
+}
+
 .footer-text-form {
   margin-bottom: 20px;
   font-style: normal;
@@ -374,10 +431,16 @@ body {
   color: #ffffff;
   text-align: center;
 }
+@media screen and (min-width: 1200px) {
+  .footer-text-form {
+    text-align: left;
+  }
+}
 
 .footer-form {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   flex-direction: column;
   gap: 20px;
   align-items: center;
@@ -385,10 +448,16 @@ body {
 @media screen and (min-width: 1200px) {
   .footer-form {
     display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
     gap: 12px;
     width: 570px;
     margin: 0;
   }
+}
+
+.footer-laibel {
+  width: 100%;
 }
 
 .footer-input {
@@ -399,16 +468,6 @@ body {
   border-radius: 4px;
   background-color: #2f303a;
   color: #ffffff;
-}
-@media screen and (min-width: 1200px) {
-  .footer-input {
-    width: 358px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .footer-input {
-    width: 450px;
-  }
 }
 
 input::-moz-placeholder {
@@ -790,8 +849,20 @@ input::placeholder {
 .filter-list {
   display: flex;
   gap: 8px;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  width: 326px;
+}
+@media screen and (min-width: 768px) {
+  .filter-list {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-bottom: 50px;
+    width: 100%;
+  }
 }
 
 .btn-filter {
@@ -826,7 +897,17 @@ input::placeholder {
 
 .project-item {
   background-color: var(--super-waite);
-  width: 370px;
+  width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .project-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project-item {
+    width: calc((100% - 90px) / 3);
+  }
 }
 
 .project-link {
