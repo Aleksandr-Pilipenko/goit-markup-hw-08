@@ -4,18 +4,39 @@
   padding-bottom: 60px;
 }
 .footer-content {
+  @include tablets {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 60px;
+  }
   @include desktop {
     display: flex;
     align-items: baseline;
     gap: 70px;
   }
+
   display: flex;
   flex-wrap: wrap;
-  // flex-direction: column;
+  flex-direction: column;
   align-items: center;
   gap: 60px;
 }
 
+.footer-info {
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+}
 .footer__logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -29,7 +50,15 @@
 }
 
 .footer__contact {
-  margin-bottom: 9px;
+  @include desktop {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
 }
 .footer__address {
   font-style: normal;
@@ -60,12 +89,22 @@
 }
 
 .networks__title {
+  @include desktop {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--super-waite);
+    text-align: left;
+  }
   font-weight: 700;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--super-waite);
+  text-align: center;
 }
 
 .networks__list {
@@ -105,11 +144,10 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
+
+  text-align: center;
 }
 
-// .footer__feedback {
-//   display: flex;
-// }
 .footer-form {
   @include desktop {
     display: flex;
@@ -117,14 +155,23 @@
     width: 570px;
     margin: 0;
   }
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
 }
 
 .footer-input {
   @include desktop {
     width: 358px;
   }
-  // width: 400px;
+  @include tablets {
+    width: 450px;
+  }
 
+  width: 100%;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
