@@ -1,4 +1,11 @@
 .filter-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+  width: 326px;
+
   @include tablets {
     display: flex;
     gap: 8px;
@@ -7,12 +14,6 @@
     margin-bottom: 50px;
     width: 100%;
   }
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 40px;
-  width: 326px;
 }
 .btn-filter {
   font-family: inherit;

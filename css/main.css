@@ -42,7 +42,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  width: 100%;
 }
 
 .link {
@@ -67,6 +66,7 @@ img {
   --border-clients: #afb1b8;
   --footer-logo-color: rgba(255, 255, 255, 0.1);
   --color-bng-footer: #2f303a;
+  --hero-gradient: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
 }
 
 .visually-hidden {
@@ -521,17 +521,38 @@ input::placeholder {
   padding-bottom: 118px;
   text-align: center;
   background-color: var(--color-hero-bng);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
+  background-image: var(--hero-gradient), url(../images/hero-bg-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   max-width: 1600px;
   margin: 0 auto;
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--hero-gradient), url(../images/hero-bg-mob-x2.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: var(--hero-gradient), url(../images/hero-bg-tab.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--hero-gradient), url(../images/hero-bg-tab-x2.jpg);
+  }
+}
 @media screen and (min-width: 1200px) {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: var(--hero-gradient), url(../images/hero-bg.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--hero-gradient), url(../images/hero-bg-x2.jpg);
   }
 }
 

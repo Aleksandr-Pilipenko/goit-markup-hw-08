@@ -1,15 +1,27 @@
 .hero {
+  padding-top: 118px;
+  padding-bottom: 118px;
+  text-align: center;
+  background-color: var(--color-hero-bng);
+  background-image: var(--hero-gradient), url(../images/hero-bg-mob.jpg);
+  @include retina {
+    background-image: var(--hero-gradient), url(../images/hero-bg-mob-x2.jpg);
+  }
+
+  @include tablets {
+    background-image: var(--hero-gradient), url(../images/hero-bg-tab.jpg);
+    @include retina {
+      background-image: var(--hero-gradient), url(../images/hero-bg-tab-x2.jpg);
+    }
+  }
   @include desktop {
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: var(--hero-gradient), url(../images/hero-bg.jpg);
+    @include retina {
+      background-image: var(--hero-gradient), url(../images/hero-bg-x2.jpg);
+    }
   }
-  padding-top: 118px;
-  padding-bottom: 118px;
-
-  text-align: center;
-  background-color: var(--color-hero-bng);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -18,15 +30,15 @@
 }
 
 .hero__title {
-  @include desktop {
-    font-size: 44px;
-    line-height: 1.36;
-  }
   font-weight: 900;
   font-size: 26px;
   line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  @include desktop {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 
   color: var(--super-waite);
 
@@ -47,13 +59,14 @@
 
   color: var(--super-waite);
   background-color: var(--accent-color);
+
+  display: inline-block;
+  padding: 10px 24px;
+  min-width: 200px;
   @include desktop {
     padding: 10px 32px;
     min-width: 216px;
   }
-  display: inline-block;
-  padding: 10px 24px;
-  min-width: 200px;
   transition-property: color, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

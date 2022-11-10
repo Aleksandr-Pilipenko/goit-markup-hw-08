@@ -22,13 +22,6 @@
   width: 100%;
 }
 .feature__content {
-  @include tablets {
-    width: 354px;
-  }
-
-  @include desktop {
-    width: 270px;
-  }
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,6 +30,13 @@
   border-radius: 4px;
   // width: 450px;
   height: 120px;
+  @include tablets {
+    width: 354px;
+  }
+
+  @include desktop {
+    width: 270px;
+  }
 }
 
 .feature__title {
