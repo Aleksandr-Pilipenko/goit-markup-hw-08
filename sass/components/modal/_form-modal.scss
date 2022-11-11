@@ -43,7 +43,7 @@
   outline: transparent;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:focus {
-    border: 1px solid #2196f3;
+    border: 1px solid var(--accent-color);
   }
 }
 
@@ -115,32 +115,38 @@
   fill: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   .checkbox:checked + & {
-    background-color: #2196f3;
+    background-color: var(--accent-color);
     border-color: transparent;
     fill: #ffffff;
     border: 0.2px solid #ffffff;
   }
   .checkbox:focus + & {
-    border-color: #2196f3;
+    border-color: var(--accent-color);
   }
 }
 
 .check-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
 
-  color: #757575;
+    color: #757575;
+  }
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .check-link {
   text-decoration: underline;
-  color: #2196f3;
+  color: var(--accent-color);
 }
 .btn-form {
   display: flex;
@@ -158,7 +164,7 @@
   line-height: 30px;
 
   color: var(--super-waite);
-  background: #2196f3;
+  background: var(--accent-color);
 
   border-radius: 4px;
   border: transparent;
