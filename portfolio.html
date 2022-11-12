@@ -31,10 +31,10 @@
         <nav class="header__navigation">
           <ul class="header__navigation__list list">
             <li>
-              <a class="header__navigation__site link" href="./index.html">Студія</a>
+              <a class="header__navigation__site link current underline" href="#">Студія</a>
             </li>
             <li>
-              <a class="header__navigation__site link current underline" href="#">Портфоліо</a>
+              <a class="header__navigation__site link" href="./portfolio.html">Портфоліо</a>
             </li>
             <li>
               <a class="header__navigation__site link" href="#">Контакти</a>
@@ -45,7 +45,7 @@
         <ul class="conect list">
           <li>
             <a class="conect__cont link" href="mailto:info@devstudio.com"
-              ><svg class="conect__icon" width="16" height="12">
+              ><svg class="conect__icon size-icon-envelop" width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com</a
@@ -54,7 +54,7 @@
 
           <li>
             <a class="conect__cont link" href="tel:+380961111111">
-              <svg class="conect__icon" width="10" height="16">
+              <svg class="conect__icon size-icon-tel" width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -78,10 +78,10 @@
           <div class="mobile-botom">
             <ul class="mobile-list list">
               <li>
-                <a class="mbile-link link" href="./index.html">Студія</a>
+                <a class="mbile-link link current" href="#">Студія</a>
               </li>
               <li>
-                <a class="mbile-link link current" href="#">Портфоліо</a>
+                <a class="mbile-link link" href="./portfolio.html">Портфоліо</a>
               </li>
               <li>
                 <a class="mbile-link link" href="#">Контакти</a>
@@ -524,8 +524,8 @@
             <span class="header__logo__color link">Web</span>Studio</a
           >
           <address>
-            <ul class="list">
-              <li class="footer__contact">
+            <ul class="list footer__contact">
+              <li>
                 <a
                   class="footer__address link"
                   href="https://goo.gl/maps/ySp4Y71NyuGyJNaQ7"
@@ -534,7 +534,7 @@
                   >м. Київ, пр-т Лесі Українки, 26</a
                 >
               </li>
-              <li class="footer__contact">
+              <li>
                 <a class="footer__link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
               </li>
               <li>
@@ -594,13 +594,12 @@
           </ul>
         </div>
 
-        <div>
+        <div class="footer-feedback">
           <p class="footer-text-form">Підпишіться на розсилку</p>
           <form class="footer-form">
-            <label>
+            <label class="footer-laibel">
               <input class="footer-input" type="email" name="email" placeholder="E-mail" />
             </label>
-
             <button class="footer-btn-form" type="submit">
               Підписатися
               <svg width="24" height="24">

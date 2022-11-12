@@ -89,7 +89,9 @@
     color: var(--accent-color);
   }
 }
-
+// .networks {
+//   margin-left: 70px;
+// }
 .networks__title {
   @include desktop {
     font-weight: 700;
@@ -141,7 +143,7 @@
     width: 450px;
   }
   @include desktop {
-    width: 358px;
+    width: 570px;
   }
 }
 .footer-text-form {
@@ -168,7 +170,7 @@
     flex-direction: row;
     gap: 12px;
     width: 570px;
-    margin: 0;
+    // margin-left: 93px;
   }
 
   display: flex;

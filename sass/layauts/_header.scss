@@ -15,6 +15,12 @@
 
 .header__logo,
 .header__logo__color {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  padding: 16px 0;
   @include mobile {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -42,23 +48,32 @@
 .header__navigation__list .header__navigation__site.current {
   color: var(--accent-color);
 }
-
+.header__navigation {
+  @include tablets {
+    margin-left: 87px;
+  }
+  @include desktop {
+    margin-left: 93px;
+  }
+}
 .header__navigation__list {
   display: none;
 
   @include tablets {
     display: flex;
-    margin-left: 87px;
+
     gap: 50px;
   }
   @include desktop {
     display: flex;
-    margin-left: 93px;
+
     gap: 50px;
   }
 }
 
 .header__navigation__site {
+  @include desktop {
+  }
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -72,10 +87,8 @@
   color: var(--title-text-color);
   display: flex;
   flex-direction: column;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -105,8 +118,8 @@
     gap: 10px;
     flex-direction: column;
     margin-left: auto;
-    padding-top: 21px;
-    padding-bottom: 21px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   @include desktop {
     display: flex;
@@ -120,34 +133,54 @@
 
 .conect__cont {
   @include tablets {
+    font-size: 12px;
+    line-height: 1.16;
     padding-top: 0px;
     padding-bottom: 0px;
   }
   @include desktop {
-  }
-  color: var(--text-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
 
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding-top: 32px;
-  padding-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
+    transition: colort 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
   }
 }
 
 .conect__icon {
   fill: currentColor;
+}
+.size-icon-envelop {
+  @include tablets {
+    width: 14px;
+    height: 10px;
+  }
+  @include desktop {
+    width: 16px;
+    height: 12px;
+  }
+}
+.size-icon-tel {
+  @include tablets {
+    width: 10px;
+    height: 14px;
+  }
+  @include desktop {
+    width: 10px;
+    height: 16px;
+  }
 }
 
 .btn-open-menu {
