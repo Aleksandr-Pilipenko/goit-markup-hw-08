@@ -133,29 +133,31 @@
 
 .conect__cont {
   @include tablets {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     font-size: 12px;
     line-height: 1.16;
     padding-top: 0px;
     padding-bottom: 0px;
   }
   @include desktop {
-    color: var(--text-color);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-
     display: flex;
     align-items: center;
     gap: 10px;
     padding-top: 32px;
     padding-bottom: 32px;
 
-    transition: colort 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover,
-    &:focus {
-      color: var(--accent-color);
-    }
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+  color: var(--text-color);
+  font-weight: 500;
+  transition: colort 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
   }
 }
 

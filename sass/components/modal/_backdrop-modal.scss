@@ -10,42 +10,20 @@
     visibility 250ms cubic-bezier(0.3, 0, 0.02, 1.13);
 }
 .modal {
-  min-width: 290px;
-  min-height: 370px;
   padding: 20px;
-  background: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
   position: absolute;
   top: 50%;
   left: 50%;
+  border-radius: 4px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   transform: translate(-50%, -50%) scale(1);
-
   transition: transform 250ms cubic-bezier(0.3, 0, 0.02, 1.13);
-  @include mobile {
-    min-width: 370px;
-    min-height: 529px;
-    padding: 40px;
-  }
-  // @include tablets {
-  //   min-width: 370px;
-  //   min-height: 529px;
-  //   padding: 40px;
-  //   background: #ffffff;
-  //   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-  //     0px 2px 1px rgba(0, 0, 0, 0.2);
-  //   border-radius: 4px;
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%) scale(1);
 
-  //   transition: transform 250ms cubic-bezier(0.3, 0, 0.02, 1.13);
-  // }
-  @include desktop {
-    min-width: 448px;
-    min-height: 501px;
+  @include mobile {
+    min-height: 519px;
+    padding: 40px;
   }
 }
 
@@ -62,8 +40,8 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
 
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 3px;
+  right: 3px;
 
   display: flex;
   align-items: center;
@@ -72,6 +50,10 @@
   &:hover,
   &:focus {
     fill: #2196f3;
+  }
+  @include mobile {
+    top: 8px;
+    right: 8px;
   }
 }
 

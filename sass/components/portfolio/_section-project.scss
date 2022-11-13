@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  justify-content: center;
 }
 .project-item {
   background-color: var(--super-waite);
@@ -13,7 +12,8 @@
     width: calc((100% - 30px) / 2);
   }
   @include desktop {
-    width: calc((100% - 90px) / 3);
+    width: 370px;
+    // flex-basis: calc((100% - 90px) / 3);
   }
 }
 .project-link {
@@ -64,11 +64,16 @@
   border-right: 1px solid #eeeeee;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .item-portfolio-size {
+    padding-bottom: 56px;
+  }
+}
 .title-list {
   color: var(--title-text-color);
   font-size: 18px;
   line-height: 2;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   margin-bottom: 4px;
 }
 .project-text {

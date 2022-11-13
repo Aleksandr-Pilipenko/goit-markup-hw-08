@@ -2,6 +2,10 @@
   padding-top: 118px;
   padding-bottom: 118px;
   text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
   background-color: var(--color-hero-bng);
   background-image: var(--hero-gradient), url(../images/hero-bg-mob.jpg);
   @include retina {
@@ -13,6 +17,7 @@
     @include retina {
       background-image: var(--hero-gradient), url(../images/hero-bg-tab-x2.jpg);
     }
+    max-width: 890px;
   }
   @include desktop {
     padding-top: 200px;
@@ -21,12 +26,9 @@
     @include retina {
       background-image: var(--hero-gradient), url(../images/hero-bg-x2.jpg);
     }
+
+    max-width: 1600px;
   }
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  max-width: 1600px;
-  margin: 0 auto;
 }
 
 .hero__title {
@@ -35,17 +37,19 @@
   line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  @include desktop {
-    font-size: 44px;
-    line-height: 1.36;
-  }
 
   color: var(--super-waite);
 
   margin-bottom: 30px;
-  max-width: 696px;
+  max-width: 360px;
   margin-left: auto;
   margin-right: auto;
+
+  @include desktop {
+    font-size: 44px;
+    line-height: 1.36;
+    max-width: 696px;
+  }
 }
 .hero__btn {
   font-family: inherit;
